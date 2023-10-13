@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="./css/stlyles.css">  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+    <header>       
+        <nav class="navbar bg-dark">
+            <div class="container-fluid xxl-12 xl-12 lg-12 md-12 xs-12"> 
+                <img src="./img/powehard_logo.jpg" alt="">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="" aria-label="Buscar">
+                    <button class="btn btn-outline-success" type="submit">Search</button>    
+                    <a href="#"><i class="fa-solid fa-cart-shopping" id="carrito-icono" style="color: #ffffff;"></i></a>
+                    <span id="numero-articulos-carrito"></span>
+                </form>
+                
+                <script src="https://kit.fontawesome.com/64e4b13b04.js" crossorigin="anonymous"></script>  
+            </div>         
+            
+            <div id="carrito-lista" class="lista-carrito">
+                <ul>
+                    <li class="submenu">                           
+                        <div id="carrito">                            
+                            <table id="lista-carrito" class="tabla">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="boton btn btn-success">Vaciar Carrito</a>
+                        </div>
+                    </li>
+                </ul>                                      
+            </div>            
+        </nav>                                                 
+    </header>
+    
+    <main>
+        <section id="lista-productos" class="articulos">
+            <div class="articulo">
+                <img src="./img/producto1.png" alt="Producto 1">
+                <div class="info-articulo">
+                    <h2>Monitor 24" Asus VP249QGR 144hz</h2>
+                    <p class="precio">Precio: $20.00</p>
+                    <label for="cantidadProducto1">Cantidad:</label>
+                    <input class="cantidad-producto" type="number" value="1" min="1"><br>
+                    <a href="#" class="u-full-width button input agregar-carrito" data-id="1">Agregar Al Carrito</a>
+                </div>
+            </div>
+            <div class="articulo">
+                <img src="./img/producto2.png" alt="Producto 2">
+                <div class="info-articulo">
+                    <h2>Placa de Video - MSI Rtx 3090 Ventus</h2>
+                    <p class="precio">Precio: $20.00</p>
+                    <label for="cantidadProducto2">Cantidad:</label>
+                    <input class="cantidad-producto" type="number" value="1" min="1"><br>
+                    <a href="#" class="u-full-width button input agregar-carrito" data-id="2">Agregar Al Carrito</a>
+                </div>
+            </div>           
+            <div class="articulo">
+                <img src="./img/producto3.jpg" alt="Producto 3">
+                <div class="info-articulo">
+                    <h2>Fuente Be Quiet 1000W 80 Plus Gold</h2>
+                    <p class="precio">Precio: $95.000</p>
+                    <label for="cantidadProducto3">Cantidad:</label>
+                    <input class="cantidad-producto" type="number" value="1" min="1"><br>
+                    <a href="#" class="u-full-width button input agregar-carrito" data-id="3">Agregar Al Carrito</a>
+                </div>
+            </div>
+            <div class="articulo">
+                <img src="./img/producto4.jpg" alt="Producto 4">
+                <div class="info-articulo">
+                    <h2>Notebook Gamer Asus TUF FX506L FHD 15.6"</h2>
+                    <p class="precio">Precio: $620.000</p>
+                    <label for="cantidadProducto4">Cantidad:</label>
+                    <input class="cantidad-producto" type="number" value="1" min="1"><br>
+                    <a href="#" class="u-full-width button input agregar-carrito" data-id="4">Agregar Al Carrito</a>
+                </div>
+            </div>
+            <div class="articulo">
+                <img src="./img/producto5.jpg" alt="Producto 5">
+                <div class="info-articulo">
+                    <h2>Gabinete Lian Li O11 Dynamic XL ROG White</h2>
+                    <p class="precio">Precio: $200.000</p>
+                    <label for="cantidadProducto5">Cantidad:</label>
+                    <input class="cantidad-producto" type="number" value="1" min="1"><br>
+                    <a href="#" class="u-full-width button input agregar-carrito" data-id="5">Agregar Al Carrito</a>
+                </div>
+            </div>
+            <div class="articulo">
+                <img src="./img/producto6.jpg" alt="Producto 6">
+                <div class="info-articulo">
+                    <h2>Auriculares HyperX Cloud Flight Wireless</h2>
+                    <p class="precio">Precio: $67.000</p>
+                    <label for="cantidadProducto6">Cantidad:</label>
+                    <input class="cantidad-producto" type="number" value="1" min="1"><br>
+                    <a href="#" class="u-full-width button input agregar-carrito" data-id="6">Agregar Al Carrito</a>
+                </div>
+            </div>
+            <div class="articulo">
+                <img src="./img/producto7.jpg" alt="Producto 7">
+                <div class="info-articulo">
+                    <h2>Memoria Kingston DDR4 16GB 3200Mhz</h2>
+                    <p class="precio">Precio: $68.000</p>
+                    <label for="cantidadProducto7">Cantidad:</label>
+                    <input class="cantidad-producto" type="number" value="1" min="1"><br>
+                    <a href="#" class="u-full-width button input agregar-carrito" data-id="7">Agregar Al Carrito</a>
+                </div>
+            </div>
+            <div class="articulo">
+                <img src="./img/producto8.jpg" alt="Producto 8">
+                <div class="info-articulo">
+                    <h2>Cooler CPU ID-Cooling ZOOMFLOW XT 240</h2>
+                    <p class="precio">Precio: $65.000</p>
+                    <label for="cantidadProducto8">Cantidad:</label>
+                    <input class="cantidad-producto" type="number" value="1" min="1"><br>
+                    <a href="#" class="u-full-width button input agregar-carrito" data-id="8">Agregar Al Carrito</a>
+                </div>
+            </div>
+            <div class="articulo">
+                <img src="./img/producto9.jpg" alt="Producto 9">
+                <div class="info-articulo">
+                    <h2>Mother ASUS ROG Z790-E GAMING WIFI</h2>
+                    <p class="precio">Precio: $500.000</p>
+                    <label for="cantidadProducto9">Cantidad:</label>
+                    <input class="cantidad-producto" type="number" value="1" min="1"><br>
+                    <a href="#" class="u-full-width button input agregar-carrito" data-id="9">Agregar Al Carrito</a>
+                </div>
+            </div>
+            <div class="articulo">
+                <img src="./img/producto10.jpg" alt="Producto 10">
+                <div class="info-articulo">
+                    <h2>Procesador AMD Ryzen 9 7950X 5.7GHz AM5</h2>
+                    <p class="precio">Precio: $770.000</p>
+                    <label for="cantidadProducto10">Cantidad:</label>
+                    <input class="cantidad-producto" type="number" value="1" min="1"><br>
+                    <a href="#" class="u-full-width button input agregar-carrito" data-id="10">Agregar Al Carrito</a>
+                </div>
+            </div>
+            <div class="articulo">
+                <img src="./img/producto11.jpg" alt="Producto 11">
+                <div class="info-articulo">
+                    <h2>Joystick PS5 Sony Dualsense Gray Camo Original</h2>
+                    <p class="precio">Precio: $62.000</p>
+                    <label for="cantidadProducto11">Cantidad:</label>
+                    <input class="cantidad-producto" type="number" value="1" min="1"><br>
+                    <a href="#" class="u-full-width button input agregar-carrito" data-id="11">Agregar Al Carrito</a>
+                </div>
+            </div>
+            <div class="articulo">
+                <img src="./img/producto12.jpg" alt="Producto 12">
+                <div class="info-articulo">
+                    <h2>SSD M.2 WD 500GB Black SN850 7000MB/s NVMe</h2>
+                    <p class="precio">Precio: $100.000</p>
+                    <label for="cantidadProducto12">Cantidad:</label>
+                    <input class="cantidad-producto" type="number" value="1" min="1"><br>
+                    <a href="#" class="u-full-width button input agregar-carrito" data-id="12">Agregar Al Carrito</a>
+                </div>
+            </div>           
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
